@@ -9,7 +9,7 @@ public class FirstIndex {
             return si;
         }
 
-        // Recursive call on the rest of the array
+        // Recursive c all on the rest of the array
         return firstIndex(arr, si + 1, data);
     }
 
