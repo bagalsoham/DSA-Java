@@ -1,9 +1,9 @@
 package myqueue;
 
 public class Queue {
-    private int[] data;
-    private int front;
-    private int size;
+    protected int[] data;
+    protected int front;
+    protected int size;
 
     public Queue() {
         this(5); // call parameterized constructor
@@ -61,4 +61,19 @@ public class Queue {
         }
         System.out.println();
     }
+    @Override
+    public String toString() {  
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < size; i++) {
+            int idx = (front + i) % data.length;
+            sb.append(data[idx]);
+            if (i < size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
 }
