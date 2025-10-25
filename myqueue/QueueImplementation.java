@@ -1,15 +1,15 @@
 package myqueue;
 
-public class Queue {
+public class QueueImplementation {
     protected int[] data;
     protected int front;
     protected int size;
 
-    public Queue() {
+    public QueueImplementation() {
         this(5); // call parameterized constructor
     }
 
-    public Queue(int capacity) {
+    public QueueImplementation(int capacity) {
         data = new int[capacity];
         front = 0;
         size = 0;

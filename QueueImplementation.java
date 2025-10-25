@@ -1,7 +1,7 @@
-import myqueue.Queue;
+import myqueue.QueueImplementation;
 public class QueueImplementation {
     public static void main(String[] args) {
-        Queue q = new Queue();
+        QueueImplementation q = new QueueImplementation();
         try {
             q.enqueue(10);
             q.enqueue(20);

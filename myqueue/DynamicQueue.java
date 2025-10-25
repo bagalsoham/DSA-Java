@@ -1,6 +1,6 @@
 package myqueue;
 
-public class DynamicQueue extends Queue {
+public class DynamicQueue extends QueueImplementation {
     @Override
     public void enqueue(int item ) throws Exception {
         if (isFull()) {
