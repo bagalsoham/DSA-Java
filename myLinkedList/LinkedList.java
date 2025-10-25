@@ -125,4 +125,21 @@ public class LinkedList {
         }
         return rv;
     }
+    public int removeLast() throws Exception{
+        if(this.size ==0 ){
+            throw new Exception("List is empty");
+        }
+        int returnValue = this.tail.data;
+        if(this.size ==1){
+            this.head = null;
+            this.tail = null;
+            this.size =0;
+        } else {
+            Node sm2 = getNodeAt(this.size -2);
+            sm2.next = null;// second last node's next is null now
+            this.tail = sm2;// update tail
+            this.size--;
+        }
+        return returnValue;
+    }
 }

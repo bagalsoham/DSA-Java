@@ -32,6 +32,10 @@ public class ClientLinkedList {
             System.out.println("Removed first element: " + list.removeFirst());  // 5
             list.display();  // 10 -> 20 -> null
 
+            // Remove last element
+            System.out.println("Removed last element: " + list.removeLast());  // 20
+            list.display();  // 10 -> null
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
