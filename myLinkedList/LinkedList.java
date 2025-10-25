@@ -142,4 +142,25 @@ public class LinkedList {
         }
         return returnValue;
     }
+    public int removeAt(int idx) throws Exception {
+        if(idx <0 || idx >= this.size){
+            throw new Exception("Invalid Index");
+        }
+        if (this.size ==0) {
+            throw new Exception("List is empty");
+        }
+        if(idx ==0){
+            return removeFirst();
+        } else if (idx == this.size -1) {
+            return removeLast();
+        } else {
+            Node nm1 = getNodeAt(idx -1);// node at idx-1
+            Node n = nm1.next;// node at idx
+            Node np1 = n.next;// node at idx+1
+
+            nm1.next = np1;
+            this.size--;
+            return n.data;
+        }
+    }
 }
