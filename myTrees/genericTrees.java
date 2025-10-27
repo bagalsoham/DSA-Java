@@ -54,9 +54,11 @@ public class genericTrees {
         }
 
         str = str + "End";
+        //display the string for current node 
+        System.out.println(str);
         //display for all children of current node
         for(int i = 0 ; i < node.children.size() ; i++){
-            this.display(node.children.get(i));
+            this.display(node.children.get(i));//recursive call for each child
         }
     }
 }
